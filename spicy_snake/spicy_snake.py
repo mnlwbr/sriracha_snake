@@ -21,14 +21,18 @@ win = curses.newwin(80, 25, 0, 0)
 win.nodelay(True)
  """
 
+# defensive code: validity checks on input data
+VALID_DIRECTIONS = {'up','right','down','left'}
 
 def move(current_position, direction):
+    assert direction in VALID_DIRECTIONS
     x, y = current_position
 
     #
     if type(x) != int or type(y) != int:
         raise Exception("x and y have to be integers")
 
+    # code that does the calculations
     if direction is 'right':
         new_position = x+1, y
     

@@ -17,7 +17,18 @@ pip install -r windows-requirements.txt
 Run the game
 ```
 python spicy_snake/snake.py
+
 ```
+
+## Run the tests
+
+Run the tests with
+
+	pytest (-v)
+
+or calculate test coverage with:
+
+	pytest --cov
 
 ### License
 

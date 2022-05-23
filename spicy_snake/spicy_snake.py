@@ -1,7 +1,7 @@
 import curses
 
 
-LEFT = (-1, 0)
+""" LEFT = (-1, 0)
 RIGHT = (1, 0)
 UP = (0, -1)
 DOWN = (0, 1)
@@ -19,8 +19,33 @@ screen.keypad(False)
 
 win = curses.newwin(80, 25, 0, 0)
 win.nodelay(True)
+ """
 
 
+def move(current_position, direction):
+    x, y = current_position
+
+    #
+    if type(x) != int or type(y) != int:
+        raise Exception("x and y have to be integers")
+
+    if direction is 'right':
+        new_position = x+1, y
+    
+    elif direction is 'up':
+        new_position = x, y+1
+    
+    elif direction is 'down':
+        new_position = x, y-1
+    
+    else:
+        new_position = x-1, y
+
+    return(new_position)
+
+
+
+""" 
 def game_loop(screen):
     x, y = 5, 5
 
@@ -50,3 +75,4 @@ if __name__ == "__main__":
 
     curses.wrapper(game_loop)
     curses.endwin()
+ """

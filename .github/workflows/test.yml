@@ -1,4 +1,4 @@
-name: Sriracha Snake
+name: sriracha_snake
 
 on:
   push:

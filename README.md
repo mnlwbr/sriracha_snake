@@ -1,3 +1,5 @@
+![Python application](https://github.com/mnlwbr/sriracha_snake/workflows/Sriracha\ Snake/badge.svg)
+
 # stationary_sriracha_snake
 a snake game written in python
 

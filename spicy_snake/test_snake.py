@@ -17,7 +17,7 @@ also see: Uncle Bob "Clean Code Lectures"
 """
 import random
 import pytest
-from spicy_snake import move
+from spicy_snake.moves import move, VALID_DIRECTIONS
 
 
 #TODO: also test random positions

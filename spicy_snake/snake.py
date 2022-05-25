@@ -1,5 +1,5 @@
 
-from spicy_snake.playground import Playground
+from playground import Playground
 import curses
 
 

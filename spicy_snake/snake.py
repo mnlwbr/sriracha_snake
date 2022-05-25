@@ -1,6 +1,7 @@
 
 from playground import Playground
 import curses
+from screen_helper import prepare_screen
 
 
 LEFT = (-1, 0)
@@ -10,19 +11,9 @@ DOWN = (0, -1)
 
 KEY_COMMANDS = {97: LEFT, 100: RIGHT, 115: UP, 119: DOWN}
 
-# prepare the screen
-screen = curses.initscr()
-curses.start_color()
-curses.init_pair(1, curses.COLOR_GREEN, curses.COLOR_BLACK)
-curses.init_pair(2, curses.COLOR_BLUE, curses.COLOR_BLACK)
-curses.curs_set(0)
-curses.noecho()
-curses.raw()
-screen.keypad(False)
 
-win = curses.newwin(40, 15, 0, 0)
-win.nodelay(True)
 
+win, screen = prepare_screen()
 
 def draw(pg,xPlayer,yPlayer):
     x = pg.size[0]

@@ -1,6 +1,6 @@
 import random
 
-class Playground():
+class Playground:
 
     def __init__(self, xsize, ysize):
         
